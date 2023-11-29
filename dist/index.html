@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src= 
+"https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.6.4/math.min.js"
+        integrity= 
+"sha512-iphNRh6dPbeuPGIrQbCdbBF/qcqadKWLa35YPVfMZMHBSI6PLJh1om2xCTWhpVpmUyb4IvVS9iYnnYMkleVXLA=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    <h1 class="flex justify-center items-center text-4xl font-bold mt-10">Calculator</h1>
+    <table class="flex flex-col items-center justify-center mt-24 text-center" id="Calculator">
+        <tr>
+            
+            <td colspan="3" class="border border-black"><input type="text" id="result" class="w-56 h-10"></td>
+            <td class="border border-black w-20 h-12"><input type="button" value="C" onclick="clr()" class="bg-[#704505] text-white w-[74px] h-10 rounded-md"></td>
+        </tr>
+        <tr>
+            <td class="border border-black w-20 h-12"><input type="button" value="1" onclick="dis('1')" onkeydown="myFunction(event)" class="bg-[#704505] text-white w-[74px] h-10 rounded-md"></td>
+            <td class="border border-black w-20 h-12"><input type="button" value="2" onclick="dis('2')" onkeydown="myFunction(event)" class="bg-[#704505] text-white w-[74px] h-10 rounded-md"></td>
+            <td class="border border-black w-20 h-12"><input type="button" value="3" onclick="dis('3')" onkeydown="myFunction(event)" class="bg-[#704505] text-white w-[74px] h-10 rounded-md"></td>
+            <td class="border border-black w-20 h-12"><input type="button" value="/" onclick="dis('/')" onkeydown="myFunction(event)" class="bg-[#704505] text-white w-[74px] h-10 rounded-md"></td>
+        </tr>
+        <tr>
+            <td class="border border-black w-20 h-12"><input type="button" value="4" onclick="dis('4')" onkeydown="myFunction(event)" class="bg-[#704505] text-white w-[74px] h-10 rounded-md"></td>
+            <td class="border border-black w-20 h-12"><input type="button" value="5" onclick="dis('5')" onkeydown="myFunction(event)" class="bg-[#704505] text-white w-[74px] h-10 rounded-md"></td>
+            <td class="border border-black w-20 h-12"><input type="button" value="6" onclick="dis('6')" onkeydown="myFunction(event)" class="bg-[#704505] text-white w-[74px] h-10 rounded-md"></td>
+            <td class="border border-black w-20 h-12"><input type="button" value="*" onclick="dis('*')" onkeydown="myFunction(event)" class="bg-[#704505] text-white w-[74px] h-10 rounded-md"></td>
+        </tr>
+        <tr>
+            <td class="border border-black w-20 h-12"><input type="button" value="7" onclick="dis('7')" onkeydown="myFunction(event)" class="bg-[#704505] text-white w-[74px] h-10 rounded-md"></td>
+            <td class="border border-black w-20 h-12"><input type="button" value="8" onclick="dis('8')" onkeydown="myFunction(event)" class="bg-[#704505] text-white w-[74px] h-10 rounded-md"></td>
+            <td class="border border-black w-20 h-12"><input type="button" value="9" onclick="dis('9')" onkeydown="myFunction(event)" class="bg-[#704505] text-white w-[74px] h-10 rounded-md"></td>
+            <td class="border border-black w-20 h-12"><input type="button" value="-" onclick="dis('-')" onkeydown="myFunction(event)" class="bg-[#704505] text-white w-[74px] h-10 rounded-md"></td>
+        </tr>
+        <tr>
+            <td class="border border-black w-20 h-12"><input type="button" value="0" onclick="dis('0')" onkeydown="myFunction(event)" class="bg-[#704505] text-white w-[74px] h-10 rounded-md"></td>
+            <td class="border border-black w-20 h-12"><input type="button" value="." onclick="dis('.')" onkeydown="myFunction(event)" class="bg-[#704505] text-white w-[74px] h-10 rounded-md"></td>
+            <td class="border border-black w-20 h-12"><input type="button" data-equals value="=" onclick="solve()" class="bg-[#704505] text-white w-[74px] h-10 rounded-md"></td>
+            <td class="border border-black w-20 h-12"><input type="button" value="+" onclick="dis('+')" onkeydown="myFunction(event)" class="bg-[#704505] text-white w-[74px] h-10 rounded-md"></td>
+        </tr>
+    </table>
+    <script src="script.js"></script>
+</body>
+</html>
